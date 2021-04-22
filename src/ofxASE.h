@@ -50,7 +50,7 @@ private:
     
     
     static uint32_t readBigEndian32(char * start);
-    static Float32 readBigEndianFloat32(char * start);
+    static float  readBigEndianFloat32(char * start);
     static uint16_t readBigEndian16(char * start);
     static ofColor readRGB(char * start);
     static ofColor readCMYK(char * start);

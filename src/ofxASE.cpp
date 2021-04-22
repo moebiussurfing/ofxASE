@@ -100,9 +100,9 @@ uint32_t ofxASE::readBigEndian32(char * start){
     return res;
 }
 
-Float32 ofxASE::readBigEndianFloat32(char * start){
+float ofxASE::readBigEndianFloat32(char * start){
     uint32_t bytes = readBigEndian32(start);
-    Float32 res = *((Float32 *)&bytes);
+    float res = *((float *)&bytes);
     return res;
 }
 
@@ -127,10 +127,10 @@ ofColor ofxASE::readRGB(char * start){
 }
 
 ofColor ofxASE::readCMYK(char * start){
-    Float32 C = readBigEndianFloat32(start + 0);
-    Float32 M = readBigEndianFloat32(start + 4);
-    Float32 Y = readBigEndianFloat32(start + 8);
-    Float32 K = readBigEndianFloat32(start + 12);
+    float C = readBigEndianFloat32(start + 0);
+    float M = readBigEndianFloat32(start + 4);
+    float Y = readBigEndianFloat32(start + 8);
+    float K = readBigEndianFloat32(start + 12);
     
     return ofColor(255 * (1.0 - C) * (1.0 - K),
                    255 * (1.0 - M) * (1.0 - K),
